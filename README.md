@@ -1,4 +1,5 @@
-# marocco
+# Go Adventures
+
 Building a Project in Marroco
 
 # Commands
