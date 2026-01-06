@@ -17,7 +17,7 @@
 /* Nav Menu Colors */
 :root {
   --nav-color: rgba(244, 239, 231, 0.95); /* Sand-tinted nav */
-  --nav-hover-color: rgba(224, 155, 45, 0.85); /* Sun orange hover */
+  --nav-hover-color: #e09b2dd9; /* Sun orange hover */
   --nav-mobile-background-color: #f4efe7;
   --nav-dropdown-background-color: #ffffff;
   --nav-dropdown-color: #2b2b2b;
@@ -27,8 +27,11 @@
 /* Color Presets */
 
 .light-background {
-  --background-color: #e9e2d6; /* Lighter sand */
-  --surface-color: #ffffff;
+  --background-color: #1f2f3a; /* Deep desert-night blue */
+  --default-color: #ffffff;
+  --heading-color: #f0c66a; /* Soft sun gold for headings */
+  --surface-color: #2e3f4a;
+  --contrast-color: #772828;
 }
 
 .dark-background {
