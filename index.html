@@ -15,7 +15,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,6 +30,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
 
 </head>
 
@@ -36,24 +39,11 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000">
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-          <g id="SVGRepo_iconCarrier">
-            <g id="a"></g>
-            <g id="b">
-              <path d="M21,4H11c-1.1046,0-2,.8954-2,2V28h4v-7c0-.5523,.4477-1,1-1h4c.5523,0,1,.4477,1,1v7h4V6c0-1.1046-.8954-2-2-2Z" style="fill:#f2ebe2;"></path>
-              <path d="M30.1416,10.0103l-6.1416-.8774v-3.1329c0-1.6543-1.3457-3-3-3H11c-1.6543,0-3,1.3457-3,3v3.1329l-6.1416,.8774c-.4922,.0703-.8584,.4922-.8584,.9897V28c0,.5522,.4473,1,1,1H30c.5527,0,1-.4478,1-1V11c0-.4976-.3662-.9194-.8584-.9897ZM11,5h10c.5518,0,1,.4487,1,1V27h-2v-6c0-1.103-.8975-2-2-2h-4c-1.1025,0-2,.897-2,2v6h-2V6c0-.5513,.4482-1,1-1Zm7,22h-4v-6h4v6ZM3,11.8672l5-.7144v15.8472H3V11.8672Zm26,15.1328h-5V11.1528l5,.7144v15.1328ZM15,15.5v-1c0-.2762,.2239-.5,.5-.5h1c.2761,0,.5,.2238,.5,.5v1c0,.2761-.2239,.5-.5,.5h-1c-.2761,0-.5-.2239-.5-.5Zm3-7v-1c0-.2762,.2239-.5,.5-.5h1c.2761,0,.5,.2238,.5,.5v1c0,.2761-.2239,.5-.5,.5h-1c-.2761,0-.5-.2239-.5-.5Zm7.5,7v-1c0-.2762,.2239-.5,.5-.5h1c.2761,0,.5,.2238,.5,.5v1c0,.2761-.2239,.5-.5,.5h-1c-.2761,0-.5-.2239-.5-.5Zm0,3v-1c0-.2762,.2239-.5,.5-.5h1c.2761,0,.5,.2238,.5,.5v1c0,.2761-.2239,.5-.5,.5h-1c-.2761,0-.5-.2239-.5-.5ZM6.5,14.5v1c0,.2761-.2239,.5-.5,.5h-1c-.2761,0-.5-.2239-.5-.5v-1c0-.2762,.2239-.5,.5-.5h1c.2761,0,.5,.2238,.5,.5Zm0,3v1c0,.2761-.2239,.5-.5,.5h-1c-.2761,0-.5-.2239-.5-.5v-1c0-.2762,.2239-.5,.5-.5h1c.2761,0,.5,.2238,.5,.5Zm5.5-2v-1c0-.2762,.2239-.5,.5-.5h1c.2761,0,.5,.2238,.5,.5v1c0,.2761-.2239,.5-.5,.5h-1c-.2761,0-.5-.2239-.5-.5Zm0-7v-1c0-.2762,.2239-.5,.5-.5h1c.2761,0,.5,.2238,.5,.5v1c0,.2761-.2239,.5-.5,.5h-1c-.2761,0-.5-.2239-.5-.5Zm3,0v-1c0-.2762,.2239-.5,.5-.5h1c.2761,0,.5,.2238,.5,.5v1c0,.2761-.2239,.5-.5,.5h-1c-.2761,0-.5-.2239-.5-.5Zm3,3.5v-1c0-.2762,.2239-.5,.5-.5h1c.2761,0,.5,.2238,.5,.5v1c0,.2761-.2239,.5-.5,.5h-1c-.2761,0-.5-.2239-.5-.5Zm-6,0v-1c0-.2762,.2239-.5,.5-.5h1c.2761,0,.5,.2238,.5,.5v1c0,.2761-.2239,.5-.5,.5h-1c-.2761,0-.5-.2239-.5-.5Zm3,0v-1c0-.2762,.2239-.5,.5-.5h1c.2761,0,.5,.2238,.5,.5v1c0,.2761-.2239,.5-.5,.5h-1c-.2761,0-.5-.2239-.5-.5Z" style="fill:#917a5a;"></path>
-            </g>
-          </g>
-        </svg>
-        <h1 class="sitename">LuxuryHotel</h1>
+      <a href="index.html" class="d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="Go Adventures Morocco" class="img-fluid rounded" style="height: 120px;">
       </a>
 
-      <nav id="navmenu" class="navmenu">
+      <nav id="navmenu" class="navmenu ms-3">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -80,7 +70,9 @@
             <a href="#english">
               <svg class="icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="SVGRepo_iconCarrier">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H6V2H10V4H8.86807C8.57073 5.66996 7.78574 7.17117 6.6656 8.35112C7.46567 8.73941 8.35737 8.96842 9.29948 8.99697L10.2735 6H12.7265L15.9765 16H13.8735L13.2235 14H9.77647L9.12647 16H7.0235L8.66176 10.9592C7.32639 10.8285 6.08165 10.3888 4.99999 9.71246C3.69496 10.5284 2.15255 11 0.5 11H0V9H0.5C1.5161 9 2.47775 8.76685 3.33437 8.35112C2.68381 7.66582 2.14629 6.87215 1.75171 6H4.02179C4.30023 6.43491 4.62904 6.83446 4.99999 7.19044C5.88743 6.33881 6.53369 5.23777 6.82607 4H0V2H4V0ZM12.5735 12L11.5 8.69688L10.4265 12H12.5735Z" fill="currentColor"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4 0H6V2H10V4H8.86807C8.57073 5.66996 7.78574 7.17117 6.6656 8.35112C7.46567 8.73941 8.35737 8.96842 9.29948 8.99697L10.2735 6H12.7265L15.9765 16H13.8735L13.2235 14H9.77647L9.12647 16H7.0235L8.66176 10.9592C7.32639 10.8285 6.08165 10.3888 4.99999 9.71246C3.69496 10.5284 2.15255 11 0.5 11H0V9H0.5C1.5161 9 2.47775 8.76685 3.33437 8.35112C2.68381 7.66582 2.14629 6.87215 1.75171 6H4.02179C4.30023 6.43491 4.62904 6.83446 4.99999 7.19044C5.88743 6.33881 6.53369 5.23777 6.82607 4H0V2H4V0ZM12.5735 12L11.5 8.69688L10.4265 12H12.5735Z"
+                    fill="currentColor"></path>
                 </g>
               </svg>
               <span>English</span>
@@ -96,7 +88,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted d-none d-sm-block" href="booking.html">Book Now</a>
+      <a class="btn-getstarted d-sm-block" href="booking.html">Book Now</a>
 
     </div>
   </header>
@@ -119,7 +111,8 @@
             <div class="col-lg-10">
               <div class="hero-text text-center" data-aos="fade-up" data-aos-delay="100">
                 <h1>Discover Elegance and Comfort</h1>
-                <p class="hero-subtitle">Experience unparalleled luxury in the heart of the city with world-class amenities and personalized service that exceeds every expectation.</p>
+                <p class="hero-subtitle">Experience unparalleled luxury in the heart of the city with world-class
+                  amenities and personalized service that exceeds every expectation.</p>
 
                 <div class="hero-features" data-aos="fade-up" data-aos-delay="200">
                   <div class="feature-item">
@@ -196,25 +189,29 @@
               <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
                 <div class="stat-item">
                   <div class="stat-number">
-                    <span data-purecounter-start="0" data-purecounter-end="250" data-purecounter-duration="2" class="purecounter"></span>+
+                    <span data-purecounter-start="0" data-purecounter-end="250" data-purecounter-duration="2"
+                      class="purecounter"></span>+
                   </div>
                   <div class="stat-label">Luxury Rooms</div>
                 </div>
                 <div class="stat-item">
                   <div class="stat-number">
-                    <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="2" class="purecounter"></span>+
+                    <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="2"
+                      class="purecounter"></span>+
                   </div>
                   <div class="stat-label">Years Experience</div>
                 </div>
                 <div class="stat-item">
                   <div class="stat-number">
-                    <span data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="2" class="purecounter"></span>%
+                    <span data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="2"
+                      class="purecounter"></span>%
                   </div>
                   <div class="stat-label">Guest Satisfaction</div>
                 </div>
                 <div class="stat-item">
                   <div class="stat-number">
-                    <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="2" class="purecounter"></span>/7
+                    <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="2"
+                      class="purecounter"></span>/7
                   </div>
                   <div class="stat-label">Concierge Service</div>
                 </div>
@@ -263,9 +260,12 @@
                 <h2>Discover the Pinnacle of Hospitality</h2>
               </div>
 
-              <p>Experience unparalleled luxury at Heritage Grand Hotel, where timeless elegance meets modern sophistication. For over four decades, we have crafted memorable experiences through exceptional service and attention to every detail.</p>
+              <p>Experience unparalleled luxury at Heritage Grand Hotel, where timeless elegance meets modern
+                sophistication. For over four decades, we have crafted memorable experiences through exceptional service
+                and attention to every detail.</p>
 
-              <p>Our commitment to excellence has earned recognition from prestigious hospitality awards worldwide, making us the preferred choice for discerning guests seeking both comfort and distinction.</p>
+              <p>Our commitment to excellence has earned recognition from prestigious hospitality awards worldwide,
+                making us the preferred choice for discerning guests seeking both comfort and distinction.</p>
 
               <div class="features-grid">
                 <div class="feature-item">
@@ -356,7 +356,8 @@
                     <i class="bi bi-star-fill"></i>
                   </div>
                 </div>
-                <p class="room-excerpt">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.</p>
+                <p class="room-excerpt">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                  deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.</p>
                 <div class="room-amenities">
                   <i class="bi bi-wifi"></i>
                   <i class="bi bi-tv"></i>
@@ -388,7 +389,8 @@
                   </div>
                   <div class="compact-content">
                     <h4>Executive Business Suite</h4>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                      pariatur.</p>
                     <div class="compact-features">
                       <span><i class="bi bi-briefcase"></i> Work Desk</span>
                       <span><i class="bi bi-building"></i> City View</span>
@@ -411,7 +413,8 @@
                   </div>
                   <div class="compact-content">
                     <h4>Ocean View Double Room</h4>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                    </p>
                     <div class="compact-features">
                       <span><i class="bi bi-water"></i> Ocean View</span>
                       <span><i class="bi bi-tree"></i> Balcony</span>
@@ -434,7 +437,8 @@
                   </div>
                   <div class="compact-content">
                     <h4>Family Connecting Rooms</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore.</p>
                     <div class="compact-features">
                       <span><i class="bi bi-door-open"></i> Connected</span>
                       <span><i class="bi bi-controller"></i> Entertainment</span>
@@ -565,7 +569,8 @@
                 <h4>Rooftop Pool &amp; Terrace</h4>
               </div>
               <div class="amenity-content">
-                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.</p>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                  magni dolores eos qui ratione.</p>
                 <div class="amenity-features">
                   <span class="feature-tag">24/7 Access</span>
                   <span class="feature-tag">Pool Bar</span>
@@ -583,7 +588,8 @@
                 <h4>Luxury Spa Center</h4>
               </div>
               <div class="amenity-content">
-                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi.</p>
+                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
+                  quia non numquam eius modi.</p>
                 <div class="amenity-features">
                   <span class="feature-tag">Massage</span>
                   <span class="feature-tag">Sauna</span>
@@ -601,7 +607,8 @@
                 <h4>Gourmet Restaurant</h4>
               </div>
               <div class="amenity-content">
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.</p>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                  deleniti atque corrupti.</p>
                 <div class="amenity-features">
                   <span class="feature-tag">Room Service</span>
                   <span class="feature-tag">Live Music</span>
@@ -619,7 +626,8 @@
                 <h4>Modern Fitness Studio</h4>
               </div>
               <div class="amenity-content">
-                <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae.</p>
+                <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et
+                  voluptates repudiandae.</p>
                 <div class="amenity-features">
                   <span class="feature-tag">Personal Training</span>
                   <span class="feature-tag">Yoga Classes</span>
@@ -637,7 +645,8 @@
                 <h4>High-Speed Internet</h4>
               </div>
               <div class="amenity-content">
-                <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque.</p>
+                <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est
+                  eligendi optio cumque.</p>
                 <div class="amenity-features">
                   <span class="feature-tag">Business Center</span>
                   <span class="feature-tag">Conference Rooms</span>
@@ -655,7 +664,8 @@
                 <h4>24/7 Security Service</h4>
               </div>
               <div class="amenity-content">
-                <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis.</p>
+                <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias
+                  consequatur aut perferendis.</p>
                 <div class="amenity-features">
                   <span class="feature-tag">Concierge</span>
                   <span class="feature-tag">Valet Parking</span>
@@ -730,7 +740,8 @@
                   </div>
                 </div>
                 <div class="testimonial-body">
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit sed eiusmod tempor.</p>
+                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                    est laborum consectetur adipiscing elit sed eiusmod tempor.</p>
                 </div>
                 <div class="testimonial-footer">
                   <h5>Jessica Martinez</h5>
@@ -756,7 +767,8 @@
                   </div>
                 </div>
                 <div class="testimonial-body">
-                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa.</p>
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur excepteur sint occaecat cupidatat non proident sunt in culpa.</p>
                 </div>
                 <div class="testimonial-footer">
                   <h5>David Rodriguez</h5>
@@ -782,7 +794,8 @@
                   </div>
                 </div>
                 <div class="testimonial-body">
-                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua ut enim ad minim veniam quis nostrud.</p>
                 </div>
                 <div class="testimonial-footer">
                   <h5>Amanda Wilson</h5>
@@ -808,7 +821,8 @@
                   </div>
                 </div>
                 <div class="testimonial-body">
-                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis.</p>
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
+                    totam rem aperiam eaque ipsa quae ab illo inventore veritatis.</p>
                 </div>
                 <div class="testimonial-footer">
                   <h5>Ryan Thompson</h5>
@@ -834,7 +848,8 @@
                   </div>
                 </div>
                 <div class="testimonial-body">
-                  <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi.</p>
+                  <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                    deleniti atque corrupti quos dolores et quas molestias excepturi.</p>
                 </div>
                 <div class="testimonial-footer">
                   <h5>Rachel Chen</h5>
@@ -882,7 +897,8 @@
               </div>
               <div class="offer-content">
                 <h3>Weekend Getaway</h3>
-                <p>Escape the ordinary with our exclusive weekend package. Includes complimentary breakfast and late checkout until 2 PM.</p>
+                <p>Escape the ordinary with our exclusive weekend package. Includes complimentary breakfast and late
+                  checkout until 2 PM.</p>
                 <div class="offer-details">
                   <div class="price-info">
                     <span class="original-price">$299</span>
@@ -909,7 +925,8 @@
               </div>
               <div class="offer-content">
                 <h3>Extended Stay Deal</h3>
-                <p>Stay 5 nights or more and enjoy significant savings. Perfect for business travelers and extended vacations with premium amenities.</p>
+                <p>Stay 5 nights or more and enjoy significant savings. Perfect for business travelers and extended
+                  vacations with premium amenities.</p>
                 <div class="offer-details">
                   <div class="price-info">
                     <span class="original-price">$189</span>
@@ -936,7 +953,8 @@
               </div>
               <div class="offer-content">
                 <h3>Advance Booking</h3>
-                <p>Plan ahead and save more! Book your stay 30 days in advance and enjoy exclusive rates with free cancellation up to 7 days.</p>
+                <p>Plan ahead and save more! Book your stay 30 days in advance and enjoy exclusive rates with free
+                  cancellation up to 7 days.</p>
                 <div class="offer-details">
                   <div class="price-info">
                     <span class="original-price">$249</span>
@@ -962,7 +980,8 @@
                 <div class="col-lg-8">
                   <div class="banner-content">
                     <h2>Limited Time Offer</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit.</p>
                   </div>
                 </div>
                 <div class="col-lg-4 text-lg-end">
@@ -1005,7 +1024,8 @@
                 <div class="col-lg-8">
                   <div class="text-content">
                     <h2>Experience Luxury Like Never Before</h2>
-                    <p class="lead mb-0">Book your dream getaway today and enjoy exclusive amenities, world-class service, and unforgettable memories. Limited availability for our premium suites.</p>
+                    <p class="lead mb-0">Book your dream getaway today and enjoy exclusive amenities, world-class
+                      service, and unforgettable memories. Limited availability for our premium suites.</p>
                   </div>
                 </div>
                 <div class="col-lg-4">
@@ -1196,7 +1216,8 @@
                   <i class="bi bi-geo-alt"></i>
                 </div>
                 <h4>Museums &amp; Culture</h4>
-                <p>Explore world-class museums and cultural landmarks just minutes from your doorstep. From contemporary art to historical exhibitions.</p>
+                <p>Explore world-class museums and cultural landmarks just minutes from your doorstep. From contemporary
+                  art to historical exhibitions.</p>
                 <ul class="nearby-places">
                   <li><i class="bi bi-dot"></i> Metropolitan Museum - 0.8 miles</li>
                   <li><i class="bi bi-dot"></i> Art Gallery District - 1.2 miles</li>
@@ -1215,7 +1236,8 @@
                   <i class="bi bi-bag-check"></i>
                 </div>
                 <h4>Shopping &amp; Dining</h4>
-                <p>Indulge in premier shopping and culinary experiences. From boutique stores to award-winning restaurants in the entertainment district.</p>
+                <p>Indulge in premier shopping and culinary experiences. From boutique stores to award-winning
+                  restaurants in the entertainment district.</p>
                 <ul class="nearby-places">
                   <li><i class="bi bi-dot"></i> Grand Shopping Mall - 0.3 miles</li>
                   <li><i class="bi bi-dot"></i> Restaurant Row - 0.6 miles</li>
@@ -1234,7 +1256,8 @@
                   <i class="bi bi-building"></i>
                 </div>
                 <h4>Business Hub</h4>
-                <p>Strategically located in the heart of the financial district. Perfect for business travelers with easy access to corporate centers.</p>
+                <p>Strategically located in the heart of the financial district. Perfect for business travelers with
+                  easy access to corporate centers.</p>
                 <ul class="nearby-places">
                   <li><i class="bi bi-dot"></i> Convention Center - 0.4 miles</li>
                   <li><i class="bi bi-dot"></i> Financial District - 0.7 miles</li>
@@ -1338,7 +1361,8 @@
             </div>
             <div class="swiper-slide">
               <div class="gallery-item">
-                <img src="assets/img/hotel/gallery-18.webp" alt="Spa and Wellness Center" class="img-fluid" loading="lazy">
+                <img src="assets/img/hotel/gallery-18.webp" alt="Spa and Wellness Center" class="img-fluid"
+                  loading="lazy">
                 <a href="assets/img/hotel/gallery-18.webp" class="gallery-overlay glightbox">
                   <i class="bi bi-eye"></i>
                 </a>
@@ -1433,7 +1457,8 @@
     </div>
 
     <div class="copyright text-center">
-      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+      <div
+        class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
 
         <div class="d-flex flex-column align-items-center align-items-lg-start">
           <div>
@@ -1455,7 +1480,8 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>

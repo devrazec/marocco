@@ -1,0 +1,204 @@
+/* =========================================================
+   Go Adventures Morocco – Custom Bootstrap Theme
+   Load AFTER bootstrap.css
+   ========================================================= */
+
+/* ---------- Brand Color Variables ---------- */
+/* Global Colors - Logo-based palette */
+:root { 
+  --background-color: #f4efe7; /* Desert sand background */
+  --default-color: #2b2b2b; /* Neutral dark text for readability */
+  --heading-color: #8b1e1e; /* Moroccan red (logo text color) */
+  --accent-color: #e09b2d; /* Sun / warm orange accent */
+  --surface-color: #ffffff; /* Clean white cards */
+  --contrast-color: #ffffff; /* Text on dark/accent backgrounds */
+}
+
+/* Nav Menu Colors */
+:root {
+  --nav-color: rgba(244, 239, 231, 0.95); /* Sand-tinted nav */
+  --nav-hover-color: rgba(224, 155, 45, 0.85); /* Sun orange hover */
+  --nav-mobile-background-color: #f4efe7;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #2b2b2b;
+  --nav-dropdown-hover-color: #8b1e1e; /* Moroccan red hover */
+}
+
+/* Color Presets */
+
+.light-background {
+  --background-color: #e9e2d6; /* Lighter sand */
+  --surface-color: #ffffff;
+}
+
+.dark-background {
+  --background-color: #1f2f3a; /* Deep desert-night blue */
+  --default-color: #ffffff;
+  --heading-color: #f0c66a; /* Soft sun gold for headings */
+  --surface-color: #2e3f4a;
+  --contrast-color: #ffffff;
+}
+
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--bs-heading-color);
+  letter-spacing: 0.5px;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  background-color: var(--bs-light);
+}
+
+.navbar-brand {
+  color: var(--bs-primary);
+  font-weight: 700;
+}
+
+.navbar-brand:hover {
+  color: var(--bs-secondary);
+}
+
+.navbar-nav .nav-link {
+  color: var(--bs-primary);
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--bs-secondary);
+}
+
+/* Dark (Desert Night) Navbar */
+.navbar-dark {
+  background-color: var(--bs-dark);
+}
+
+.navbar-dark .navbar-brand,
+.navbar-dark .nav-link {
+  color: #ffffff;
+}
+
+.navbar-dark .nav-link:hover,
+.navbar-dark .nav-link.active {
+  color: var(--bs-warning);
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.btn-primary:hover {
+  background-color: #6f1717;
+  border-color: #6f1717;
+}
+
+.btn-secondary {
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
+  color: #2b2b2b;
+}
+
+.btn-secondary:hover {
+  background-color: #c98722;
+  border-color: #c98722;
+}
+
+.btn-success {
+  background-color: var(--bs-success);
+  border-color: var(--bs-success);
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background-color: #ffffff;
+  border: 1px solid var(--bs-border-color);
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* ---------- Sections ---------- */
+.section-light {
+  background-color: var(--bs-light);
+}
+
+.section-dark {
+  background-color: var(--bs-dark);
+  color: #ffffff;
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3 {
+  color: var(--bs-warning);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background-color: var(--bs-dark);
+  color: #ffffff;
+}
+
+.footer a {
+  color: var(--bs-warning);
+}
+
+.footer a:hover {
+  color: var(--bs-secondary);
+}
+
+/* ---------- Utility Classes ---------- */
+.text-desert {
+  color: var(--bs-secondary) !important;
+}
+
+.text-morocco {
+  color: var(--bs-primary) !important;
+}
+
+.bg-sand {
+  background-color: var(--bs-light) !important;
+}
+
+.bg-desert-night {
+  background-color: var(--bs-dark) !important;
+  color: #ffffff !important;
+}
+
+/* ---------- Forms ---------- */
+.form-control:focus {
+  border-color: var(--bs-secondary);
+  box-shadow: 0 0 0 0.2rem rgba(224, 155, 45, 0.25);
+}
+
+/* ---------- Smooth transitions ---------- */
+a,
+button,
+.nav-link {
+  transition: all 0.25s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .header .logo img {
+    height: 60px; /* smaller logo on tablets/mobiles */
+  }
+}
+
+.btn-getstarted {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 576px) {
+  .btn-getstarted {
+    font-size: 0.9rem; 
+    padding: 0.4rem 1rem;
+  }
+}
