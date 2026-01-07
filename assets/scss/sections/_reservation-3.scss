@@ -1,0 +1,269 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Reservation 3 Section
+--------------------------------------------------------------*/
+.reservation-3 {
+  .reservation-card {
+    background: var(--surface-color);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    .row {
+      margin: 0;
+    }
+  }
+
+  .restaurant-preview {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+
+    .preview-image {
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.8s ease;
+      }
+    }
+
+    .preview-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+      padding: 3rem 2rem 2rem;
+      color: white;
+    }
+
+    .restaurant-highlights {
+      .highlight-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        i {
+          font-size: 1.2rem;
+          color: var(--accent-color);
+          margin-right: 0.8rem;
+        }
+
+        span {
+          font-size: 0.95rem;
+          font-weight: 500;
+        }
+      }
+    }
+
+    &:hover .preview-image img {
+      transform: scale(1.05);
+    }
+  }
+
+  .booking-section {
+    padding: 3rem;
+    height: auto;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .booking-header {
+      margin-bottom: 2.5rem;
+
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        background: var(--accent-color);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      p {
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 1rem;
+
+      i {
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--accent-color);
+        font-size: 1rem;
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      input,
+      select,
+      textarea {
+        color: var(--default-color);
+        background-color: color-mix(in srgb, var(--surface-color), var(--default-color) 5%);
+        border: 2px solid color-mix(in srgb, var(--default-color), transparent 85%);
+        border-radius: 12px;
+        padding: 1rem 1rem 1rem 3rem;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        position: relative;
+        z-index: 1;
+
+        &:focus {
+          border-color: var(--accent-color);
+          background-color: var(--surface-color);
+          box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-color), transparent 85%);
+          outline: none;
+        }
+
+        &::placeholder {
+          color: color-mix(in srgb, var(--default-color), transparent 60%);
+        }
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+    }
+
+    .btn-reserve {
+      background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), black 20%));
+      color: var(--contrast-color);
+      border: none;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.6s ease;
+      }
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 35px color-mix(in srgb, var(--accent-color), transparent 70%);
+
+        &::before {
+          left: 100%;
+        }
+
+        i {
+          transform: translateX(3px);
+        }
+      }
+
+      i {
+        font-size: 1rem;
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+
+  .restaurant-info-bar {
+    background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%), color-mix(in srgb, var(--heading-color), transparent 95%));
+    padding: 2.5rem;
+    margin-top: 0;
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+
+      i {
+        font-size: 2.5rem;
+        color: var(--accent-color);
+        margin-right: 1.5rem;
+        background: var(--surface-color);
+        padding: 1rem;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      h5 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 0.3rem;
+        color: var(--heading-color);
+      }
+
+      p {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+        line-height: 1.4;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .reservation-card .row {
+      flex-direction: column-reverse;
+    }
+
+    .restaurant-preview,
+    .booking-section {
+      height: auto;
+    }
+
+    .booking-section {
+      padding: 2.5rem 2rem;
+    }
+
+    .restaurant-preview {
+      height: 400px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .booking-section {
+      padding: 2rem 1.5rem;
+
+      .booking-header h2 {
+        font-size: 2rem;
+      }
+    }
+
+    .restaurant-info-bar {
+      padding: 2rem 1.5rem;
+
+      .info-item {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        i {
+          margin-right: 0;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

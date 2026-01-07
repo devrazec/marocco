@@ -1,0 +1,70 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Chefs 3 Section
+--------------------------------------------------------------*/
+.chefs-3 {
+  .chef-featured {
+    background-color: var(--surface-color);
+
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .awards {
+      i {
+        color: var(--accent-color);
+        margin-right: 4px;
+      }
+    }
+
+    figure {
+      height: 100%;
+
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .chef-card {
+    background-color: var(--surface-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0.75rem 1.25rem color-mix(in srgb, var(--default-color), transparent 80%);
+    }
+
+    figure {
+      width: 140px;
+      height: 140px;
+      margin-left: auto;
+      margin-right: auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: 4px solid var(--background-color);
+      }
+    }
+
+    .awards i {
+      color: var(--accent-color);
+    }
+  }
+
+  @media (min-width: 992px) {
+    .chef-featured {
+      .row {
+        height: 100%;
+      }
+    }
+  }
+}

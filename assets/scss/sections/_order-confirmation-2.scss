@@ -1,0 +1,476 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Order Confirmation 2 Section
+--------------------------------------------------------------*/
+.order-confirmation-2 {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  // Confirmation badge with check icon
+  .confirmation-badge {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 0 auto 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+
+    .icon-wrap {
+      width: 78px;
+      height: 78px;
+      border-radius: 50%;
+      background-color: var(--accent-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        color: var(--contrast-color);
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  // Confirmation title
+  .confirmation-title {
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+
+  // Order timeline
+  .order-timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 25px;
+      left: 10%;
+      right: 10%;
+      height: 3px;
+      background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+      z-index: 1;
+    }
+
+    .timeline-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      width: 25%;
+
+      .step-icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background-color: color-mix(in srgb, var(--default-color), transparent 92%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.75rem;
+        border: 3px solid var(--surface-color);
+        transition: all 0.3s ease;
+
+        i {
+          color: color-mix(in srgb, var(--default-color), transparent 50%);
+          font-size: 1.3rem;
+          transition: all 0.3s ease;
+        }
+      }
+
+      .step-label {
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin-bottom: 0.25rem;
+        color: color-mix(in srgb, var(--default-color), transparent 40%);
+      }
+
+      .step-date {
+        font-size: 0.8rem;
+        color: color-mix(in srgb, var(--default-color), transparent 50%);
+      }
+
+      &.active {
+        .step-icon {
+          background-color: var(--accent-color);
+          box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent-color), transparent 80%);
+
+          i {
+            color: var(--contrast-color);
+          }
+        }
+
+        .step-label {
+          color: var(--default-color);
+        }
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      &::before {
+        display: none;
+      }
+
+      .timeline-step {
+        width: 50%;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .timeline-step {
+        width: 100%;
+      }
+    }
+  }
+
+  // Section headings
+  .section-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background-color: var(--accent-color);
+    }
+  }
+
+  // Info cards
+  .info-card {
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+
+    .card-icon {
+      flex: 0 0 50px;
+      height: 50px;
+      border-radius: 12px;
+      background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1.25rem;
+
+      i {
+        color: var(--accent-color);
+        font-size: 1.3rem;
+      }
+    }
+
+    .card-content {
+      flex: 1;
+
+      h5 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1.25rem;
+      }
+
+      .info-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          display: flex;
+          margin-bottom: 0.75rem;
+          font-size: 0.95rem;
+
+          .info-label {
+            color: color-mix(in srgb, var(--default-color), transparent 40%);
+            min-width: 120px;
+            padding-right: 1rem;
+          }
+
+          .info-value {
+            font-weight: 500;
+          }
+        }
+      }
+
+      .address {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+
+        p {
+          margin-bottom: 0.25rem;
+
+          &.name {
+            font-weight: 600;
+            font-size: 1.05rem;
+          }
+
+          &.phone {
+            margin-top: 0.5rem;
+          }
+        }
+      }
+
+      .delivery-method {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5rem 0.75rem;
+        background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-weight: 500;
+
+        i {
+          color: var(--accent-color);
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+
+  // Order items
+  .order-items {
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    padding: 1.75rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+    .item-container {
+      margin-bottom: 2rem;
+    }
+
+    .product-row {
+      display: flex;
+      align-items: center;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .product-image {
+        flex: 0 0 80px;
+        margin-right: 1.25rem;
+
+        img {
+          width: 80px;
+          height: 80px;
+          border-radius: 8px;
+          object-fit: contain;
+          background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+        }
+      }
+
+      .product-details {
+        flex: 1;
+
+        h4 {
+          font-size: 1.1rem;
+          font-weight: 500;
+          margin-bottom: 0.5rem;
+        }
+
+        .product-meta {
+          font-size: 0.9rem;
+          color: color-mix(in srgb, var(--default-color), transparent 40%);
+        }
+      }
+
+      .product-quantity {
+        flex: 0 0 50px;
+        text-align: center;
+        font-weight: 500;
+      }
+
+      .product-price {
+        flex: 0 0 100px;
+        text-align: right;
+        font-weight: 600;
+      }
+    }
+
+    .order-summary {
+      border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+      padding-top: 1.25rem;
+
+      .summary-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.75rem;
+        font-size: 0.95rem;
+
+        &.total {
+          margin-top: 1rem;
+          padding-top: 1rem;
+          border-top: 2px solid color-mix(in srgb, var(--default-color), transparent 85%);
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      padding: 1.25rem;
+
+      .product-row {
+        flex-wrap: wrap;
+
+        .product-details {
+          flex: 0 0 calc(100% - 100px);
+          margin-bottom: 0.75rem;
+        }
+
+        .product-quantity,
+        .product-price {
+          flex: 0 0 50%;
+          text-align: left;
+
+          &::before {
+            content: 'Qty: ';
+            font-weight: normal;
+            margin-right: 0.25rem;
+            color: color-mix(in srgb, var(--default-color), transparent 40%);
+          }
+        }
+
+        .product-price {
+          text-align: right;
+
+          &::before {
+            content: 'Price: ';
+          }
+        }
+      }
+    }
+  }
+
+  // What happens next section
+  .what-happens-next {
+    .next-step-card {
+      background-color: var(--surface-color);
+      border-radius: 12px;
+      padding: 1.75rem;
+      text-align: center;
+      height: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .card-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.25rem;
+
+        i {
+          color: var(--accent-color);
+          font-size: 1.6rem;
+        }
+      }
+
+      h5 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Action buttons
+  .action-buttons {
+    .btn {
+      margin: 0 0.5rem;
+      padding: 0.75rem 1.75rem;
+      font-weight: 500;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+
+      &.btn-shop-more {
+        background-color: var(--surface-color);
+        color: var(--default-color);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+        &:hover {
+          background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+          transform: translateY(-3px);
+        }
+      }
+
+      &.btn-view-order {
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+        box-shadow: 0 5px 15px color-mix(in srgb, var(--accent-color), transparent 70%);
+
+        &:hover {
+          background-color: color-mix(in srgb, var(--accent-color), #000 10%);
+          transform: translateY(-3px);
+        }
+      }
+
+      @media (max-width: 575.98px) {
+        display: block;
+        width: 100%;
+        margin: 0.5rem 0;
+      }
+    }
+  }
+
+  // Support info
+  .support-info {
+    font-size: 0.95rem;
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

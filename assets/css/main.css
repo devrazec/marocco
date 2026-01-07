@@ -15,20 +15,20 @@
 :root { 
   --background-color: #f5f4f1; /* Background color for the entire website, including individual sections */
   --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #32220b; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #917a5a; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --heading-color: #8b1e1e; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #f0c66a; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(248, 242, 233, 0.9);  /* The default color of the main navmenu links */
-  --nav-hover-color: rgba(233, 210, 174, 0.7); /* Applied to main navmenu links when they are hovered over or active */
+  --nav-color: #212529;  /* The default color of the main navmenu links */
+  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #917a5a; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #f0c66a; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -137,13 +137,69 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(0, 0, 0, 0);
+  --background-color: #f0c66a;
+  --default-color: #ffffff;
   --heading-color: #ffffff;
+  --accent-color: rgba(0, 0, 0, 0);
+  --surface-color: rgba(0, 0, 0, 0);
+  --contrast-color: rgba(0, 0, 0, 0);
   color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 15px 0;
   transition: all 0.5s;
   z-index: 997;
+  background-color: var(--background-color);
+}
+
+.header .topbar {
+  background-color: var(--background-color);
+  height: 40px;
+  padding: 0;
+  font-size: 14px;
+  transition: all 0.5s;
+}
+
+.header .topbar .contact-info i {
+  font-style: normal;
+  color: var(--contrast-color);
+}
+
+.header .topbar .contact-info i a,
+.header .topbar .contact-info i span {
+  padding-left: 5px;
+  color: var(--contrast-color);
+}
+
+@media (max-width: 575px) {
+
+  .header .topbar .contact-info i a,
+  .header .topbar .contact-info i span {
+    font-size: 13px;
+  }
+}
+
+.header .topbar .contact-info i a {
+  line-height: 0;
+  transition: 0.3s;
+}
+
+.header .topbar .contact-info i a:hover {
+  color: var(--contrast-color);
+  text-decoration: underline;
+}
+
+.header .topbar .social-links a {
+  color: color-mix(in srgb, var(--contrast-color), transparent 40%);
+  line-height: 0;
+  transition: 0.3s;
+  margin-left: 20px;
+}
+
+.header .topbar .social-links a:hover {
+  color: var(--contrast-color);
+}
+
+.header .branding {
+  min-height: 60px;
+  padding: 10px 0;
 }
 
 .header .logo {
@@ -155,66 +211,27 @@ h6 {
   margin-right: 8px;
 }
 
-.header .logo svg {
-  height: 32px;
-  margin-right: 8px;
-}
-
 .header .logo h1 {
   font-size: 30px;
   margin: 0;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-weight: 700;
   color: var(--heading-color);
-}
-
-@media (max-width: 575px) {
-  .header .logo h1 {
-    font-size: 24px;
-  }
-}
-
-.header .btn-getstarted,
-.header .btn-getstarted:focus {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  font-size: 14px;
-  padding: 8px 26px;
-  margin: 0;
-  border-radius: 50px;
-  transition: 0.3s;
-}
-
-.header .btn-getstarted:hover,
-.header .btn-getstarted:focus:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
-}
-
-@media (max-width: 1200px) {
-  .header .logo {
-    order: 1;
-  }
-
-  .header .btn-getstarted {
-    order: 2;
-    margin: 0 15px 0 0;
-    padding: 6px 20px;
-  }
-
-  .header .navmenu {
-    order: 3;
-  }
 }
 
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 
+.scrolled .header .topbar {
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: rgba(24, 14, 1, 0.8);
+  --background-color: #f0c66a;
 }
 
 /*--------------------------------------------------------------
@@ -792,6 +809,307 @@ section,
 
 .section-title p {
   margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Hero 21 Section
+--------------------------------------------------------------*/
+.hero-21 {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 200px 0;
+  overflow: hidden;
+}
+
+.hero-21 .hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-21 .hero-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-21 .hero-background .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--background-color), transparent 20%) 0%, color-mix(in srgb, var(--background-color), transparent 40%) 100%);
+  z-index: 2;
+}
+
+.hero-21 .container {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-21 .hero-content .badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
+  color: var(--accent-color);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+
+.hero-21 .hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .hero-21 .hero-content h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-21 .hero-content h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.hero-21 .hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero-21 .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+.hero-21 .cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-21 .cta-buttons .btn-primary,
+.hero-21 .cta-buttons .btn-secondary {
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-21 .cta-buttons .btn-primary {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  border: 2px solid var(--accent-color);
+}
+
+.hero-21 .cta-buttons .btn-primary:hover {
+  background-color: color-mix(in srgb, var(--accent-color), black 15%);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px color-mix(in srgb, var(--accent-color), transparent 60%);
+}
+
+.hero-21 .cta-buttons .btn-secondary {
+  background-color: transparent;
+  color: var(--default-color);
+  border: 2px solid color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.hero-21 .cta-buttons .btn-secondary i {
+  font-size: 1.2rem;
+}
+
+.hero-21 .cta-buttons .btn-secondary:hover {
+  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+  border-color: var(--default-color);
+  transform: translateY(-3px);
+}
+
+.hero-21 .booking-widget {
+  background: color-mix(in srgb, var(--surface-color), transparent 5%);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+}
+
+@media (max-width: 992px) {
+  .hero-21 .booking-widget {
+    margin-top: 3rem;
+    padding: 2rem;
+  }
+}
+
+.hero-21 .booking-widget h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--heading-color);
+}
+
+.hero-21 .booking-widget .form-group {
+  margin-bottom: 1.25rem;
+}
+
+.hero-21 .booking-widget .form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--heading-color);
+  margin-bottom: 0.5rem;
+}
+
+.hero-21 .booking-widget .form-group .form-control {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: var(--default-color);
+  background-color: var(--surface-color);
+  transition: all 0.3s ease;
+}
+
+.hero-21 .booking-widget .form-group .form-control:focus {
+  border-color: var(--accent-color);
+  outline: none;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-color), transparent 90%);
+}
+
+.hero-21 .booking-widget .form-group .form-control::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+.hero-21 .booking-widget .submit-btn {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.hero-21 .booking-widget .submit-btn i {
+  font-size: 1.2rem;
+}
+
+.hero-21 .booking-widget .submit-btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color), black 15%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px color-mix(in srgb, var(--accent-color), transparent 60%);
+}
+
+.hero-21 .features-strip {
+  margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+  .hero-21 .features-strip {
+    margin-top: 3rem;
+  }
+}
+
+.hero-21 .features-strip .feature-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: color-mix(in srgb, var(--surface-color), transparent 40%);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hero-21 .features-strip .feature-box {
+    padding: 1rem;
+    border-right: none;
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  }
+}
+
+.hero-21 .features-strip .feature-box:last-child {
+  border-right: none;
+  border-bottom: none;
+}
+
+.hero-21 .features-strip .feature-box i {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-21 .features-strip .feature-box i {
+    font-size: 2rem;
+  }
+}
+
+.hero-21 .features-strip .feature-box .feature-text h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--heading-color);
+}
+
+@media (max-width: 768px) {
+  .hero-21 .features-strip .feature-box .feature-text h4 {
+    font-size: 0.9rem;
+  }
+}
+
+.hero-21 .features-strip .feature-box .feature-text p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+@media (max-width: 768px) {
+  .hero-21 .features-strip .feature-box .feature-text p {
+    font-size: 0.8rem;
+  }
+}
+
+.hero-21 .features-strip .feature-box:hover {
+  background: color-mix(in srgb, var(--surface-color), transparent 20%);
+  transform: translateY(-5px);
+}
+
+@media (max-width: 992px) {
+  .hero-21 {
+    min-height: auto;
+    padding: 150px 0 0 200px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -4468,6 +4786,307 @@ section,
   .room-details .room-info-tabs .nav-tabs .nav-link {
     padding: 12px 15px;
     font-size: 14px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Hero 20 Section
+--------------------------------------------------------------*/
+.hero-20 {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.hero-20 .hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-20 .hero-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-20 .hero-background .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--background-color), transparent 20%) 0%, color-mix(in srgb, var(--background-color), transparent 40%) 100%);
+  z-index: 2;
+}
+
+.hero-20 .container {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-20 .hero-content .badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
+  color: var(--accent-color);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+
+.hero-20 .hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .hero-20 .hero-content h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-20 .hero-content h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.hero-20 .hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero-20 .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+.hero-20 .cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-20 .cta-buttons .btn-primary,
+.hero-20 .cta-buttons .btn-secondary {
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-20 .cta-buttons .btn-primary {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  border: 2px solid var(--accent-color);
+}
+
+.hero-20 .cta-buttons .btn-primary:hover {
+  background-color: color-mix(in srgb, var(--accent-color), black 15%);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px color-mix(in srgb, var(--accent-color), transparent 60%);
+}
+
+.hero-20 .cta-buttons .btn-secondary {
+  background-color: transparent;
+  color: var(--default-color);
+  border: 2px solid color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.hero-20 .cta-buttons .btn-secondary i {
+  font-size: 1.2rem;
+}
+
+.hero-20 .cta-buttons .btn-secondary:hover {
+  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
+  border-color: var(--default-color);
+  transform: translateY(-3px);
+}
+
+.hero-20 .booking-widget {
+  background: color-mix(in srgb, var(--surface-color), transparent 5%);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+}
+
+@media (max-width: 992px) {
+  .hero-20 .booking-widget {
+    margin-top: 3rem;
+    padding: 2rem;
+  }
+}
+
+.hero-20 .booking-widget h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--heading-color);
+}
+
+.hero-20 .booking-widget .form-group {
+  margin-bottom: 1.25rem;
+}
+
+.hero-20 .booking-widget .form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--heading-color);
+  margin-bottom: 0.5rem;
+}
+
+.hero-20 .booking-widget .form-group .form-control {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: var(--default-color);
+  background-color: var(--surface-color);
+  transition: all 0.3s ease;
+}
+
+.hero-20 .booking-widget .form-group .form-control:focus {
+  border-color: var(--accent-color);
+  outline: none;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-color), transparent 90%);
+}
+
+.hero-20 .booking-widget .form-group .form-control::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
+.hero-20 .booking-widget .submit-btn {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.hero-20 .booking-widget .submit-btn i {
+  font-size: 1.2rem;
+}
+
+.hero-20 .booking-widget .submit-btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color), black 15%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px color-mix(in srgb, var(--accent-color), transparent 60%);
+}
+
+.hero-20 .features-strip {
+  margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+  .hero-20 .features-strip {
+    margin-top: 3rem;
+  }
+}
+
+.hero-20 .features-strip .feature-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: color-mix(in srgb, var(--surface-color), transparent 40%);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hero-20 .features-strip .feature-box {
+    padding: 1rem;
+    border-right: none;
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  }
+}
+
+.hero-20 .features-strip .feature-box:last-child {
+  border-right: none;
+  border-bottom: none;
+}
+
+.hero-20 .features-strip .feature-box i {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-20 .features-strip .feature-box i {
+    font-size: 2rem;
+  }
+}
+
+.hero-20 .features-strip .feature-box .feature-text h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--heading-color);
+}
+
+@media (max-width: 768px) {
+  .hero-20 .features-strip .feature-box .feature-text h4 {
+    font-size: 0.9rem;
+  }
+}
+
+.hero-20 .features-strip .feature-box .feature-text p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+@media (max-width: 768px) {
+  .hero-20 .features-strip .feature-box .feature-text p {
+    font-size: 0.8rem;
+  }
+}
+
+.hero-20 .features-strip .feature-box:hover {
+  background: color-mix(in srgb, var(--surface-color), transparent 20%);
+  transform: translateY(-5px);
+}
+
+@media (max-width: 992px) {
+  .hero-20 {
+    min-height: auto;
+    padding: 80px 0;
   }
 }
 

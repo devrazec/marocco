@@ -1,0 +1,211 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Resume 5 Section
+--------------------------------------------------------------*/
+.resume-5 {
+  .resume-experience {
+    margin-bottom: 3rem;
+
+    h3 {
+      color: var(--heading-color);
+      margin-bottom: 2rem;
+      font-size: 1.75rem;
+
+      i {
+        color: var(--accent-color);
+        margin-right: 0.5rem;
+      }
+    }
+
+    .experience-card {
+      background-color: var(--surface-color);
+      border-radius: 10px;
+      overflow: hidden;
+      height: 100%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+      .card-header {
+        background: linear-gradient(45deg,
+            var(--accent-color),
+            color-mix(in srgb, var(--accent-color), transparent 50%));
+        padding: 1.5rem;
+        color: var(--contrast-color);
+
+        .date {
+          font-size: 0.9rem;
+          opacity: 0.9;
+          display: block;
+          margin-bottom: 0.5rem;
+        }
+
+        h4 {
+          color: var(--contrast-color);
+          margin-bottom: 0.5rem;
+        }
+
+        .company {
+          font-size: 1rem;
+          margin: 0;
+          opacity: 0.9;
+        }
+      }
+
+      .card-body {
+        padding: 1.5rem;
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            color: var(--default-color);
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+
+            &:before {
+              content: "▹";
+              position: absolute;
+              left: 0;
+              color: var(--accent-color);
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .education-section,
+  .certifications-section {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: 10px;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+    h3 {
+      color: var(--heading-color);
+      margin-bottom: 2rem;
+      font-size: 1.75rem;
+
+      i {
+        color: var(--accent-color);
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .education-card {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    h4 {
+      color: var(--heading-color);
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .institution {
+      color: var(--accent-color);
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .date {
+      color: var(--default-color);
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .badge {
+      background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+      color: var(--accent-color);
+      font-size: 0.8rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 15px;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .certification-card {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .cert-icon {
+      width: 50px;
+      height: 50px;
+      min-width: 50px;
+      background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+
+      i {
+        color: var(--accent-color);
+        font-size: 1.5rem;
+      }
+    }
+
+    .cert-details {
+      h4 {
+        color: var(--heading-color);
+        font-size: 1.1rem;
+        margin-bottom: 0.25rem;
+      }
+
+      p {
+        color: var(--default-color);
+        font-size: 0.9rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .date {
+        color: var(--accent-color);
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    .resume-header {
+      padding: 2rem;
+      text-align: center;
+
+      .profile-image {
+        margin-bottom: 2rem;
+      }
+
+      .contact-badges {
+        justify-content: center;
+      }
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .contact-badges span {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

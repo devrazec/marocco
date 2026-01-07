@@ -1,0 +1,378 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Properties 5 Section
+--------------------------------------------------------------*/
+.properties-5 {
+  .properties-filter-bar {
+    background: var(--surface-color);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+    .filter-select {
+      background: var(--background-color);
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+      color: var(--default-color);
+      padding: 12px 16px;
+      font-size: 14px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+
+      &:focus {
+        border-color: var(--accent-color);
+        box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--accent-color), transparent 80%);
+        outline: none;
+      }
+    }
+
+    .view-toggle {
+      display: flex;
+      gap: 8px;
+      justify-content: flex-end;
+
+      .view-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+        background: var(--background-color);
+        color: color-mix(in srgb, var(--default-color), transparent 40%);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+
+        i {
+          font-size: 16px;
+        }
+
+        &:hover {
+          background: color-mix(in srgb, var(--accent-color), transparent 90%);
+          border-color: var(--accent-color);
+          color: var(--accent-color);
+        }
+
+        &.active {
+          background: var(--accent-color);
+          border-color: var(--accent-color);
+          color: var(--contrast-color);
+        }
+      }
+    }
+  }
+
+  .properties-container {
+    &.list-view {
+      .property-card {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        margin-bottom: 25px;
+
+        .property-image {
+          width: 300px;
+          flex-shrink: 0;
+
+          img {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px 0 0 12px;
+          }
+        }
+
+        .property-content {
+          flex: 1;
+          padding: 20px 25px;
+        }
+
+        .property-footer {
+          width: 200px;
+          flex-shrink: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 10px;
+          padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+          flex-direction: column;
+
+          .property-image {
+            width: 100%;
+
+            img {
+              height: 250px;
+              border-radius: 12px 12px 0 0;
+            }
+          }
+
+          .property-footer {
+            width: 100%;
+            flex-direction: row;
+          }
+        }
+      }
+    }
+  }
+
+  .property-card {
+    background: var(--surface-color);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+
+      .property-image img {
+        transform: scale(1.05);
+      }
+    }
+
+    .property-image {
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+
+      img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .property-badges {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        z-index: 2;
+
+        .badge {
+          padding: 6px 12px;
+          font-size: 12px;
+          font-weight: 600;
+          border-radius: 20px;
+          margin-right: 8px;
+
+          &.featured {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+          }
+
+          &.new {
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            color: white;
+          }
+
+          &.open-house {
+            background: linear-gradient(45deg, #43e97b, #38f9d7);
+            color: white;
+          }
+
+          &.luxury {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+          }
+        }
+      }
+
+      .favorite-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        border: none;
+        background: rgba(255, 255, 255, 0.9);
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        font-size: 16px;
+
+        &:hover {
+          background: var(--accent-color);
+          color: var(--contrast-color);
+          transform: scale(1.1);
+        }
+
+        &.active {
+          background: #ff4757;
+          color: white;
+        }
+      }
+    }
+
+    .property-content {
+      padding: 25px;
+      flex: 1;
+
+      .property-price {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--accent-color);
+        margin-bottom: 8px;
+      }
+
+      .property-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--heading-color);
+        margin-bottom: 10px;
+        line-height: 1.3;
+      }
+
+      .property-location {
+        display: flex;
+        align-items: center;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+        font-size: 14px;
+        margin-bottom: 15px;
+
+        i {
+          margin-right: 6px;
+          color: var(--accent-color);
+        }
+      }
+
+      .property-features {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+
+        span {
+          display: flex;
+          align-items: center;
+          font-size: 13px;
+          color: color-mix(in srgb, var(--default-color), transparent 20%);
+          font-weight: 500;
+
+          i {
+            margin-right: 5px;
+            color: var(--accent-color);
+            font-size: 14px;
+          }
+        }
+      }
+
+      .property-agent {
+        display: flex;
+        align-items: center;
+        padding-top: 15px;
+        border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+        .agent-avatar {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-right: 10px;
+        }
+
+        span {
+          font-size: 14px;
+          color: color-mix(in srgb, var(--default-color), transparent 20%);
+          font-weight: 500;
+        }
+      }
+    }
+
+    .property-footer {
+      padding: 20px 25px 25px;
+      display: flex;
+      gap: 10px;
+
+      .btn {
+        flex: 1;
+        padding: 10px 16px;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+
+        &.btn-outline-primary {
+          border-color: var(--accent-color);
+          color: var(--accent-color);
+
+          &:hover {
+            background: var(--accent-color);
+            color: var(--contrast-color);
+          }
+        }
+
+        &.btn-primary {
+          background: var(--accent-color);
+          border-color: var(--accent-color);
+          color: var(--contrast-color);
+
+          &:hover {
+            background: color-mix(in srgb, var(--accent-color), black 15%);
+            border-color: color-mix(in srgb, var(--accent-color), black 15%);
+          }
+        }
+      }
+    }
+  }
+
+  .btn-outline-primary.btn-lg {
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: var(--accent-color);
+      color: var(--contrast-color);
+      transform: translateY(-2px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .properties-filter-bar {
+      padding: 20px;
+
+      .view-toggle {
+        justify-content: center;
+        margin-top: 15px;
+      }
+    }
+
+    .property-card {
+      .property-content {
+        padding: 20px;
+
+        .property-features {
+          gap: 10px;
+
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .property-footer {
+        padding: 15px 20px 20px;
+        flex-direction: column;
+
+        .btn {
+          padding: 12px;
+        }
+      }
+    }
+  }
+}

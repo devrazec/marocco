@@ -1,0 +1,327 @@
+/*--------------------------------------------------------------
+# Global Sections
+--------------------------------------------------------------*/
+section,
+.section {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 60px 0;
+  scroll-margin-top: 90px;
+  overflow: clip;
+}
+
+@media (max-width: 1199px) {
+
+  section,
+  .section {
+    scroll-margin-top: 66px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Global Section Titles
+--------------------------------------------------------------*/
+.section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 160px;
+      height: 1px;
+      background: color-mix(in srgb, var(--default-color), transparent 60%);
+      left: 0;
+      right: 0;
+      bottom: 1px;
+      margin: auto;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--accent-color);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+@import './sections/_hero-21.scss';
+@import './sections/_hotel-hero.scss';
+@import './sections/_about-home.scss';
+@import './sections/_rooms-showcase.scss';
+@import './sections/_amenities-cards.scss';
+@import './sections/_testimonials.scss';
+@import './sections/_offer-cards.scss';
+@import './sections/_call-to-action.scss';
+@import './sections/_events-cards.scss';
+@import './sections/_location-cards.scss';
+@import './sections/_gallery-showcase.scss';
+@import './sections/_about.scss';
+@import './sections/_rooms-showcase-about.scss';
+@import './sections/_rooms-2.scss';
+@import './sections/_room-details.scss';
+@import './sections/_hero-20.scss';
+@import './sections/_amenities.scss';
+@import './sections/_offers.scss';
+@import './sections/_restaurant.scss';
+@import './sections/_menu.scss';
+@import './sections/_booking.scss';
+@import './sections/_gallery.scss';
+@import './sections/_events.scss';
+@import './sections/_events-2.scss';
+@import './sections/_events-3.scss';
+@import './sections/_events-4.scss';
+@import './sections/_events-5.scss';
+@import './sections/_event-details-2.scss';
+@import './sections/_hotel-location.scss';
+@import './sections/_contact.scss';
+@import './sections/_contact-2.scss';
+@import './sections/_contact-3.scss';
+@import './sections/_contact-4.scss';
+@import './sections/_contact-5.scss';
+@import './sections/_contact-6.scss';
+@import './sections/_contact-7.scss';
+@import './sections/_contact-8.scss';
+@import './sections/_contact-9.scss';
+@import './sections/_contact-10.scss';
+@import './sections/_contact-11.scss';
+@import './sections/_contact-12.scss';
+@import './sections/_contact-13.scss';
+@import './sections/_contact-14.scss';
+@import './sections/_contact-15.scss';
+@import './sections/_contact-16.scss';
+@import './sections/_contact-17.scss';
+@import './sections/_contact-18.scss';
+@import './sections/_contact-19.scss';
+@import './sections/_contact-20.scss';
+@import './sections/_terms-of-service.scss';
+@import './sections/_privacy.scss';
+@import './sections/_error-404.scss';
+@import './sections/_starter-section.scss';
+@import './sections/_hero.scss';
+@import './sections/_hero-2.scss';
+@import './sections/_hero-3.scss';
+@import './sections/_hero-4.scss';
+@import './sections/_hero-5.scss';
+@import './sections/_hero-6.scss';
+@import './sections/_hero-7.scss';
+@import './sections/_hero-8.scss';
+@import './sections/_hero-9.scss';
+@import './sections/_hero-10.scss';
+@import './sections/_hero-11.scss';
+@import './sections/_hero-12.scss';
+@import './sections/_hero-13.scss';
+@import './sections/_hero-14.scss';
+@import './sections/_hero-18.scss';
+@import './sections/_hero-15.scss';
+@import './sections/_hero-16.scss';
+@import './sections/_hero-17.scss';
+@import './sections/_products-list.scss';
+@import './sections/_products-list-2.scss';
+@import './sections/_products-list-3.scss';
+@import './sections/_products-list-4.scss';
+@import './sections/_products-list-5.scss';
+@import './sections/_call-to-action-2.scss';
+@import './sections/_category-cards.scss';
+@import './sections/_cards.scss';
+@import './sections/_info-cards.scss';
+@import './sections/_promo-cards.scss';
+@import './sections/_category-cards-2.scss';
+@import './sections/_promo-cards-2.scss';
+@import './sections/_hero-19.scss';
+@import './sections/_cards-2.scss';
+@import './sections/_cards-3.scss';
+@import './sections/_cards-4.scss';
+@import './sections/_cards-5.scss';
+@import './sections/_cards-6.scss';
+@import './sections/_cards-7.scss';
+@import './sections/_cards-8.scss';
+@import './sections/_portfolio.scss';
+@import './sections/_portfolio-2.scss';
+@import './sections/_portfolio-3.scss';
+@import './sections/_portfolio-4.scss';
+@import './sections/_portfolio-5.scss';
+@import './sections/_faq-2.scss';
+@import './sections/_faq-3.scss';
+@import './sections/_faq-4.scss';
+@import './sections/_faq-5.scss';
+@import './sections/_faq-6.scss';
+@import './sections/_faq-7.scss';
+@import './sections/_faq-8.scss';
+@import './sections/_faq.scss';
+@import './sections/_tabs.scss';
+@import './sections/_tabs-2.scss';
+@import './sections/_tabs-3.scss';
+@import './sections/_tabs-4.scss';
+@import './sections/_tabs-5.scss';
+@import './sections/_tabs-6.scss';
+@import './sections/_tabs-7.scss';
+@import './sections/_tabs-8.scss';
+@import './sections/_gallery-2.scss';
+@import './sections/_gallery-3.scss';
+@import './sections/_gallery-4.scss';
+@import './sections/_gallery-5.scss';
+@import './sections/_gallery-6.scss';
+@import './sections/_gallery-7.scss';
+@import './sections/_catalog.scss';
+@import './sections/_booking-2.scss';
+@import './sections/_booking-3.scss';
+@import './sections/_booking-4.scss';
+@import './sections/_booking-5.scss';
+@import './sections/_booking-6.scss';
+@import './sections/_post-list.scss';
+@import './sections/_post-list-2.scss';
+@import './sections/_post-list-3.scss';
+@import './sections/_post-list-4.scss';
+@import './sections/_post-list-5.scss';
+@import './sections/_post-list-6.scss';
+@import './sections/_posts-section.scss';
+@import './sections/_posts-section-2.scss';
+@import './sections/_posts-section-3.scss';
+@import './sections/_post-details.scss';
+@import './sections/_post-details-2.scss';
+@import './sections/_post-details-3.scss';
+@import './sections/_agents.scss';
+@import './sections/_agents-2.scss';
+@import './sections/_agents-3.scss';
+@import './sections/_agents-4.scss';
+@import './sections/_agent-profile-2.scss';
+@import './sections/_agent-profile-3.scss';
+@import './sections/_property-details-2.scss';
+@import './sections/_property-details-3.scss';
+@import './sections/_property-details-4.scss';
+@import './sections/_properties.scss';
+@import './sections/_properties-2.scss';
+@import './sections/_properties-3.scss';
+@import './sections/_properties-4.scss';
+@import './sections/_properties-5.scss';
+@import './sections/_doctors.scss';
+@import './sections/_doctors-2.scss';
+@import './sections/_doctors-3.scss';
+@import './sections/_doctors-4.scss';
+@import './sections/_why-us.scss';
+@import './sections/_why-us-2.scss';
+@import './sections/_tour-details.scss';
+@import './sections/_tour-details-3.scss';
+@import './sections/_location-2.scss';
+@import './sections/_location-3.scss';
+@import './sections/_location-4.scss';
+@import './sections/_location-5.scss';
+@import './sections/_location-6.scss';
+@import './sections/_chefs.scss';
+@import './sections/_chefs-2.scss';
+@import './sections/_chefs-3.scss';
+@import './sections/_chefs-4.scss';
+@import './sections/_menu-2.scss';
+@import './sections/_menu-3.scss';
+@import './sections/_menu-4.scss';
+@import './sections/_menu-5.scss';
+@import './sections/_menu-6.scss';
+@import './sections/_menu-7.scss';
+@import './sections/_menu-8.scss';
+@import './sections/_menu-9.scss';
+@import './sections/_featured-programs.scss';
+@import './sections/_featured-programs-2.scss';
+@import './sections/_featured-programs-3.scss';
+@import './sections/_enroll.scss';
+@import './sections/_enroll-2.scss';
+@import './sections/_reservation.scss';
+@import './sections/_bok-a-table.scss';
+@import './sections/_reservation-2.scss';
+@import './sections/_reservation-3.scss';
+@import './sections/_instructors.scss';
+@import './sections/_instructors-2.scss';
+@import './sections/_instructors-3.scss';
+@import './sections/_instructors-4.scss';
+@import './sections/_instructors-5.scss';
+@import './sections/_instructors-6.scss';
+@import './sections/_courses.scss';
+@import './sections/_courses-2.scss';
+@import './sections/_courses-3.scss';
+@import './sections/_courses-4.scss';
+@import './sections/_courses-5.scss';
+@import './sections/_courses-6.scss';
+@import './sections/_courses-7.scss';
+@import './sections/_courses-8.scss';
+@import './sections/_courses-9.scss';
+@import './sections/_courses-10.scss';
+@import './sections/_courses-11.scss';
+@import './sections/_courses-12.scss';
+@import './sections/_courses-13.scss';
+@import './sections/_campus-facilities.scss';
+@import './sections/_campus-facilities-2.scss';
+@import './sections/_campus-facilities-3.scss';
+@import './sections/_campus-facilities-4.scss';
+@import './sections/_students-life.scss';
+@import './sections/_students-life-2.scss';
+@import './sections/_students-life-3.scss';
+@import './sections/_students-life-4.scss';
+@import './sections/_students-life-5.scss';
+@import './sections/_students-life-6.scss';
+@import './sections/_alumni.scss';
+@import './sections/_alumni-2.scss';
+@import './sections/_admissions.scss';
+@import './sections/_admissions-2.scss';
+@import './sections/_admissions-3.scss';
+@import './sections/_admissions-4.scss';
+@import './sections/_academics.scss';
+@import './sections/_academics-2.scss';
+@import './sections/_academics-3.scss';
+@import './sections/_academics-4.scss';
+@import './sections/_order-confirmation.scss';
+@import './sections/_order-confirmation-2.scss';
+@import './sections/_order-confirmation-3.scss';
+@import './sections/_account.scss';
+@import './sections/_account-2.scss';
+@import './sections/_checkout-2.scss';
+@import './sections/_checkout-3.scss';
+@import './sections/_checkout-4.scss';
+@import './sections/_cart-2.scss';
+@import './sections/_cart-3.scss';
+@import './sections/_cart-4.scss';
+@import './sections/_cart-5.scss';
+@import './sections/_product-details-2.scss';
+@import './sections/_product-details-3.scss';
+@import './sections/_product-details-4.scss';
+@import './sections/_product-details-5.scss';
+@import './sections/_slider.scss';
+@import './sections/_slider-2.scss';
+@import './sections/_slider-3.scss';
+@import './sections/_slider-4.scss';
+@import './sections/_slider-5.scss';
+@import './sections/_skills.scss';
+@import './sections/_skills-2.scss';
+@import './sections/_skills-3.scss';
+@import './sections/_skills-4.scss';
+@import './sections/_skills-5.scss';
+@import './sections/_skills-6.scss';
+@import './sections/_skills-7.scss';
+@import './sections/_skills-8.scss';
+@import './sections/_skills-9.scss';
+@import './sections/_resume.scss';
+@import './sections/_resume-2.scss';
+@import './sections/_resume-3.scss';
+@import './sections/_resume-4.scss';
+@import './sections/_resume-5.scss';
+@import './sections/_resume-6.scss';
+@import './sections/_resume-7.scss';

@@ -1,0 +1,287 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Skills 7 Section
+--------------------------------------------------------------*/
+.skills-7 {
+  .skills-intro {
+    h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: var(--heading-color);
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: var(--accent-color);
+        border-radius: 2px;
+      }
+    }
+
+    p {
+      color: color-mix(in srgb, var(--default-color), transparent 15%);
+      line-height: 1.7;
+      margin-bottom: 35px;
+      font-size: 16px;
+    }
+
+    .experience-summary {
+      margin-bottom: 40px;
+
+      .exp-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        padding: 20px;
+        background: var(--surface-color);
+        border-radius: 12px;
+        border-left: 4px solid var(--accent-color);
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: translateX(10px);
+          box-shadow: 0 8px 25px color-mix(in srgb, var(--default-color), transparent 85%);
+        }
+
+        .exp-icon {
+          width: 45px;
+          height: 45px;
+          background: color-mix(in srgb, var(--accent-color), transparent 90%);
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 15px;
+
+          i {
+            font-size: 20px;
+            color: var(--accent-color);
+          }
+        }
+
+        .exp-content {
+          h4 {
+            font-size: 18px;
+            margin: 0 0 2px 0;
+            color: var(--heading-color);
+          }
+
+          span {
+            font-size: 13px;
+            color: color-mix(in srgb, var(--default-color), transparent 35%);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+    }
+
+    .tech-stack {
+      h4 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: var(--heading-color);
+      }
+
+      .tech-icons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+
+        .tech-icon {
+          text-align: center;
+          padding: 20px 15px;
+          background: color-mix(in srgb, var(--accent-color), transparent 95%);
+          border-radius: 10px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: color-mix(in srgb, var(--accent-color), transparent 85%);
+            transform: translateY(-5px);
+          }
+
+          i {
+            font-size: 24px;
+            color: var(--accent-color);
+            margin-bottom: 8px;
+          }
+
+          span {
+            display: block;
+            font-size: 12px;
+            color: var(--heading-color);
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  .skills-container {
+    .skills-list {
+      .skill-group {
+        margin-bottom: 40px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        h4 {
+          font-size: 20px;
+          margin-bottom: 25px;
+          color: var(--heading-color);
+          position: relative;
+          padding-left: 20px;
+
+          &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 20px;
+            background: var(--accent-color);
+            border-radius: 2px;
+          }
+        }
+
+        .skill-row {
+          margin-bottom: 25px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .skill-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+
+            .skill-name {
+              font-weight: 600;
+              color: var(--heading-color);
+              font-size: 15px;
+            }
+
+            .skill-value {
+              font-size: 14px;
+              font-weight: 700;
+              color: var(--accent-color);
+              background: color-mix(in srgb, var(--accent-color), transparent 90%);
+              padding: 4px 12px;
+              border-radius: 15px;
+            }
+          }
+
+          .skill-progress {
+            height: 8px;
+            background: color-mix(in srgb, var(--default-color), transparent 90%);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+
+            .progress-bar {
+              height: 100%;
+              background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--heading-color) 25%));
+              border-radius: 10px;
+              width: 0;
+              transition: width 2s cubic-bezier(0.4, 0, 0.2, 1);
+              position: relative;
+
+              &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.4) 50%, transparent 70%);
+                animation: progressShine 2.5s infinite;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes progressShine {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @media (max-width: 991px) {
+    .skills-intro {
+      margin-bottom: 40px;
+
+      .tech-stack {
+        .tech-icons {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .skills-intro {
+      .experience-summary {
+        .exp-item {
+          padding: 15px;
+
+          .exp-icon {
+            width: 40px;
+            height: 40px;
+
+            i {
+              font-size: 18px;
+            }
+          }
+
+          .exp-content {
+            h4 {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      .tech-stack {
+        .tech-icons {
+          grid-template-columns: repeat(2, 1fr);
+
+          .tech-icon {
+            padding: 15px 10px;
+
+            i {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .skills-container {
+      .skills-list {
+        .skill-group {
+          margin-bottom: 30px;
+
+          h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}

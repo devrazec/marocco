@@ -1,0 +1,126 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Info Cards Section
+--------------------------------------------------------------*/
+.info-cards {
+  --default-color: #555;
+  --heading-color: #333;
+
+  .info-card {
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+    .icon-box {
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+
+      i {
+        font-size: 1.5rem;
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      color: var(--heading-color);
+    }
+
+    .info-text {
+      font-size: 0.9rem;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      margin-bottom: 0;
+      line-height: 1.5;
+    }
+
+    // Card specific styles
+    &.card-1 {
+      background-color: #fff9f2; // Light peach background
+
+      .icon-box {
+        background-color: #fff;
+        color: #f5a623;
+      }
+    }
+
+    &.card-2 {
+      background-color: #f0f5ff; // Light blue background
+
+      .icon-box {
+        background-color: #fff;
+        color: #ff7a00;
+      }
+    }
+
+    &.card-3 {
+      background-color: #f0fff7; // Light green background
+
+      .icon-box {
+        background-color: #fff;
+        color: #38b2ac;
+      }
+    }
+
+    &.card-4 {
+      background-color: #fff0f5; // Light pink background
+
+      .icon-box {
+        background-color: #fff;
+        color: #3b82f6;
+      }
+    }
+  }
+
+  // Responsive adjustments
+  @media (max-width: 991.98px) {
+    .info-card {
+      padding: 1.25rem;
+      gap: 0.75rem;
+
+      .icon-box {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+
+        i {
+          font-size: 1.25rem;
+        }
+      }
+
+      .info-title {
+        font-size: 1rem;
+      }
+
+      .info-text {
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .info-card {
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}

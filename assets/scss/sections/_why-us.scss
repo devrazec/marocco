@@ -1,0 +1,311 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Why Us Section
+--------------------------------------------------------------*/
+.why-us {
+  .hero-section {
+    margin-bottom: 6rem;
+
+    @media (max-width: 768px) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #ff6b6b 30%));
+    color: var(--contrast-color);
+    padding: 0.7rem 2rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-content {
+    h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--heading-color), var(--accent-color));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @media (max-width: 768px) {
+        font-size: 2.2rem;
+      }
+    }
+
+    .hero-description {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      margin-bottom: 3rem;
+
+      @media (max-width: 768px) {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .stat-item {
+      text-align: left;
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: var(--accent-color);
+        line-height: 1;
+        margin-bottom: 0.5rem;
+
+        @media (max-width: 768px) {
+          font-size: 2rem;
+        }
+      }
+
+      .stat-label {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--heading-color);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+
+  .hero-visual {
+    position: relative;
+
+    .primary-image-container {
+      position: relative;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+
+      img {
+        aspect-ratio: 4/3;
+        object-fit: cover;
+      }
+
+      .experience-badge {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        background: var(--surface-color);
+        padding: 1.5rem;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .badge-icon {
+          width: 50px;
+          height: 50px;
+          background: linear-gradient(45deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #ffd700 40%));
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          i {
+            font-size: 1.4rem;
+            color: var(--contrast-color);
+          }
+        }
+
+        .badge-info {
+          .years {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--heading-color);
+            line-height: 1;
+          }
+
+          .text {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: color-mix(in srgb, var(--default-color), transparent 30%);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+    }
+
+    .secondary-images {
+      position: absolute;
+      bottom: -30px;
+      right: -20px;
+      display: flex;
+      gap: 1rem;
+
+      @media (max-width: 768px) {
+        position: static;
+        margin-top: 2rem;
+        justify-content: center;
+      }
+
+      .image-card {
+        width: 80px;
+        height: 80px;
+        border-radius: 15px;
+        overflow: hidden;
+        border: 4px solid var(--surface-color);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+  }
+
+  .benefits-section {
+    .benefits-header {
+      text-align: center;
+      margin-bottom: 4rem;
+
+      @media (max-width: 768px) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    .section-tag {
+      display: inline-block;
+      background: color-mix(in srgb, var(--accent-color), transparent 90%);
+      color: var(--accent-color);
+      padding: 0.6rem 1.8rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 1.5rem;
+    }
+
+    h3 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .benefits-grid {
+    .benefit-card {
+      display: flex;
+      gap: 2rem;
+      padding: 2.5rem;
+      background: var(--surface-color);
+      border-radius: 25px;
+      border-left: 5px solid var(--accent-color);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      height: 100%;
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        border-left-color: color-mix(in srgb, var(--accent-color), #ff6b6b 30%);
+
+        .benefit-icon {
+          transform: scale(1.1);
+          background: linear-gradient(45deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #ff6b6b 30%));
+        }
+      }
+
+      .benefit-icon {
+        flex-shrink: 0;
+        width: 70px;
+        height: 70px;
+        background: color-mix(in srgb, var(--accent-color), transparent 85%);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+
+        i {
+          font-size: 1.6rem;
+          color: var(--accent-color);
+          transition: color 0.3s ease;
+        }
+      }
+
+      &:hover .benefit-icon i {
+        color: var(--contrast-color);
+      }
+
+      .benefit-content {
+        flex: 1;
+
+        h4 {
+          font-size: 1.4rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+          color: var(--heading-color);
+        }
+
+        p {
+          font-size: 1.1rem;
+          line-height: 1.6;
+          color: color-mix(in srgb, var(--default-color), transparent 25%);
+          margin-bottom: 1.5rem;
+        }
+
+        .benefit-features {
+          display: flex;
+          gap: 0.8rem;
+          flex-wrap: wrap;
+
+          .feature-tag {
+            background: color-mix(in srgb, var(--accent-color), transparent 92%);
+            color: var(--accent-color);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+          }
+        }
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        text-align: center;
+
+        .benefit-icon {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

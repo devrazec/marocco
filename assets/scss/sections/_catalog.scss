@@ -1,0 +1,100 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Catalog Section
+--------------------------------------------------------------*/
+.catalog {
+  .catalog-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+      padding: 12px 10px;
+      position: relative;
+      transition: 0.3s;
+      border-radius: 4px;
+
+      &+li {
+        margin-top: 10px;
+      }
+
+      i {
+        margin-right: 6px;
+        line-height: 18px;
+        color: var(--accent-color);
+      }
+
+      a {
+        color: var(--heading-color);
+        font-size: 15px;
+        line-height: 18px;
+      }
+
+      &:hover {
+        border-color: var(--accent-color);
+      }
+
+      &.active {
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+        border-color: var(--accent-color);
+
+        a,
+        i {
+          color: var(--contrast-color);
+        }
+      }
+    }
+  }
+
+  .content {
+    h3 {
+      color: var(--heading-color);
+      font-weight: 700;
+      font-size: 26px;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0 0 0 20px;
+
+      li {
+        padding-bottom: 10px;
+        display: flex;
+      }
+
+      i {
+        font-size: 20px;
+        padding-right: 8px;
+        color: var(--accent-color);
+        line-height: 20px;
+      }
+
+      span {
+        line-height: 20px;
+        font-size: 15px;
+      }
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .catalog-item {
+    overflow: hidden;
+    border-right: 3px solid var(--background-color);
+    border-bottom: 3px solid var(--background-color);
+
+    img {
+      transition: all ease-in-out 0.4s;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+}

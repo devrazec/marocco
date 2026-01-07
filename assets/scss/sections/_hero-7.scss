@@ -1,0 +1,345 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Hero 7 Section
+--------------------------------------------------------------*/
+.hero-7 {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 70%;
+    height: 140%;
+    background: color-mix(in srgb, var(--accent-color), transparent 92%);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    z-index: 0;
+    transform: rotate(-5deg);
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-content {
+    padding-right: 2rem;
+
+    .season-tag {
+      display: inline-block;
+      background: color-mix(in srgb, var(--accent-color), transparent 90%);
+      color: var(--accent-color);
+      padding: 0.5rem 1.25rem;
+      border-radius: 2rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 1.15rem;
+      margin-bottom: 2.5rem;
+      max-width: 90%;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+    }
+
+    .hero-cta {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2.5rem;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+
+      .btn-primary {
+        background-color: var(--accent-color);
+        border: none;
+        color: var(--contrast-color);
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 0.25rem;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        box-shadow: 0 6px 15px color-mix(in srgb, var(--accent-color), transparent 80%);
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          background: color-mix(in srgb, var(--accent-color), transparent 25%);
+          z-index: -1;
+          transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+
+        &:hover::before {
+          width: 100%;
+        }
+      }
+
+      .link-with-arrow {
+        color: var(--accent-color);
+        font-weight: 500;
+        font-size: 1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        position: relative;
+        transition: all 0.3s ease;
+
+        i {
+          transition: transform 0.3s ease;
+        }
+
+        &:hover {
+          color: color-mix(in srgb, var(--accent-color), transparent 20%);
+
+          i {
+            transform: translateX(5px);
+          }
+        }
+      }
+    }
+
+    .hero-features {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+
+      .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        i {
+          font-size: 1.25rem;
+          color: var(--accent-color);
+        }
+
+        span {
+          font-size: 0.95rem;
+          font-weight: 500;
+          color: color-mix(in srgb, var(--default-color), transparent 25%);
+        }
+      }
+    }
+  }
+
+  .hero-image-wrapper {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .hero-image {
+      position: relative;
+      z-index: 2;
+      width: 90%;
+      max-width: 500px;
+      filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.1));
+      animation: float 6s ease-in-out infinite;
+
+      .main-product {
+        border-radius: 10px;
+        transform: scale(1);
+        transition: transform 0.5s ease;
+
+        &:hover {
+          transform: scale(1.02);
+        }
+      }
+
+      .floating-badge {
+        position: absolute;
+        top: 30px;
+        right: -30px;
+        background: var(--accent-color);
+        color: var(--contrast-color);
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        animation: pulse 2s infinite ease-in-out;
+
+        .discount {
+          font-size: 1.2rem;
+          font-weight: 700;
+          line-height: 1;
+        }
+
+        .discount-text {
+          font-size: 0.8rem;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .decorative-element {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      background: color-mix(in srgb, var(--heading-color), transparent 90%);
+      z-index: 1;
+    }
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.05);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @media (max-width: 1199.98px) {
+    .hero-content {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    min-height: auto;
+    padding: 5rem 0;
+
+    &::before {
+      width: 100%;
+      height: 50%;
+      top: 0;
+      right: -20%;
+    }
+
+    .hero-content {
+      padding-right: 0;
+      margin-bottom: 3rem;
+      text-align: center;
+
+      h1 {
+        font-size: 2.5rem;
+
+        br {
+          display: none;
+        }
+      }
+
+      p {
+        max-width: 100%;
+      }
+
+      .hero-cta {
+        justify-content: center;
+      }
+
+      .hero-features {
+        justify-content: center;
+      }
+    }
+
+    .hero-image-wrapper {
+      .hero-image {
+        margin: 0 auto;
+      }
+
+      .decorative-element {
+        right: 50%;
+        transform: translateX(140px);
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .hero-content {
+      h1 {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .hero-image-wrapper {
+      .floating-badge {
+        top: 10px;
+        right: -20px;
+        height: 80px;
+        width: 80px;
+        padding: 0.5rem;
+
+        .discount {
+          font-size: 1.2rem;
+        }
+
+        .discount-text {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    padding: 4rem 0;
+
+    .hero-content {
+      .season-tag {
+        font-size: 0.8rem;
+      }
+
+      .hero-features {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+  }
+}

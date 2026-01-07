@@ -1,0 +1,187 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Location 5 Section
+--------------------------------------------------------------*/
+.location-5 {
+  .location-content {
+    padding-right: 2rem;
+
+    @media (max-width: 991px) {
+      padding-right: 0;
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      color: var(--heading-color);
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .location-description {
+      color: var(--default-color);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .nearby-attractions {
+    .attraction-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background-color: var(--surface-color);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 85%);
+      }
+
+      .attraction-icon {
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #000 20%));
+        color: var(--contrast-color);
+        border-radius: 10px;
+        margin-right: 1.25rem;
+
+        i {
+          font-size: 1.5rem;
+        }
+      }
+
+      .attraction-details {
+        flex: 1;
+
+        h5 {
+          color: var(--heading-color);
+          margin-bottom: 0.5rem;
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+
+        .distance {
+          display: inline-block;
+          background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
+          color: var(--accent-color);
+          padding: 0.25rem 0.75rem;
+          border-radius: 20px;
+          font-size: 0.85rem;
+          font-weight: 500;
+          margin-bottom: 0.75rem;
+        }
+
+        p {
+          color: color-mix(in srgb, var(--default-color), transparent 20%);
+          margin-bottom: 0;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+
+  .location-map {
+    height: 600px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 85%);
+
+    @media (max-width: 991px) {
+      height: 400px;
+    }
+
+    iframe {
+      border-radius: 12px;
+    }
+  }
+
+  .transportation-info {
+    background-color: var(--surface-color);
+    padding: 3rem;
+    border-radius: 16px;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+    h4 {
+      color: var(--heading-color);
+      text-align: center;
+      margin-bottom: 2.5rem;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .transport-option {
+      text-align: center;
+      padding: 1.5rem;
+
+      .transport-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #000 20%));
+        color: var(--contrast-color);
+        border-radius: 50%;
+        margin-bottom: 1.5rem;
+
+        i {
+          font-size: 2rem;
+        }
+      }
+
+      h6 {
+        color: var(--heading-color);
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      p {
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+        line-height: 1.6;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .transportation-info {
+      padding: 2rem 1.5rem;
+
+      .transport-option {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .location-content {
+      h3 {
+        font-size: 1.7rem;
+      }
+
+      .location-description {
+        font-size: 1rem;
+      }
+    }
+
+    .nearby-attractions {
+      .attraction-item {
+        flex-direction: column;
+        text-align: center;
+
+        .attraction-icon {
+          margin-right: 0;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

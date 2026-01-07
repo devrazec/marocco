@@ -1,0 +1,148 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Instructors 4 Section
+--------------------------------------------------------------*/
+.instructors-4 {
+  .instructor-card {
+    background-color: var(--surface-color);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 30px color-mix(in srgb, var(--default-color), transparent 90%);
+    transition: all 0.3s ease;
+    height: 100%;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px color-mix(in srgb, var(--default-color), transparent 85%);
+    }
+  }
+
+  .instructor-image {
+    position: relative;
+    text-align: center;
+    margin-bottom: 25px;
+
+    img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--accent-color);
+    }
+
+    .social-links {
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 5px;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+        border-radius: 50%;
+        font-size: 14px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: var(--heading-color);
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .instructor-info {
+    text-align: center;
+
+    h4 {
+      margin-bottom: 8px;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .specialty {
+      color: var(--accent-color);
+      font-weight: 500;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    p {
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+  }
+
+  .course-stats {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    padding-top: 20px;
+
+    .stat {
+      text-align: center;
+
+      strong {
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--heading-color);
+        margin-bottom: 4px;
+      }
+
+      span {
+        font-size: 12px;
+        color: color-mix(in srgb, var(--default-color), transparent 40%);
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .instructor-card {
+      padding: 25px 20px;
+    }
+
+    .instructor-image {
+      img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .social-links {
+        a {
+          width: 28px;
+          height: 28px;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .instructor-info {
+      h4 {
+        font-size: 20px;
+      }
+    }
+
+    .course-stats {
+      .stat {
+        strong {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

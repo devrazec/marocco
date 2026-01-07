@@ -1,0 +1,373 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Chefs 2 Section
+--------------------------------------------------------------*/
+.chefs-2 {
+  .featured-chef-wrapper {
+    margin-bottom: 5rem;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      background: color-mix(in srgb, var(--accent-color), transparent 90%);
+      border-radius: 50%;
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+
+    .chef-profile-card {
+      background: linear-gradient(145deg, var(--surface-color), color-mix(in srgb, var(--surface-color), var(--accent-color) 5%));
+      border-radius: 25px;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(45deg, var(--accent-color), color-mix(in srgb, var(--accent-color), transparent 40%));
+        border-radius: 50%;
+        opacity: 0.1;
+        z-index: -1;
+      }
+
+      .profile-image {
+        position: relative;
+        margin-bottom: 1.5rem;
+
+        img {
+          width: 200px;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 6px solid var(--accent-color);
+          margin: 0 auto;
+          display: block;
+          transition: transform 0.4s;
+        }
+
+        &:hover img {
+          transform: scale(1.05);
+        }
+
+        .chef-specialty {
+          position: absolute;
+          bottom: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: var(--accent-color);
+          color: var(--contrast-color);
+          padding: 0.4rem 1rem;
+          border-radius: 20px;
+          font-size: 0.8rem;
+          font-weight: 600;
+          white-space: nowrap;
+        }
+      }
+
+      .profile-details {
+        h3 {
+          font-size: 1.8rem;
+          font-weight: 800;
+          margin-bottom: 0.5rem;
+          color: var(--heading-color);
+        }
+
+        .title {
+          color: var(--accent-color);
+          font-weight: 600;
+          font-size: 1rem;
+          margin-bottom: 1rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        .experience-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+          color: var(--accent-color);
+          padding: 0.6rem 1.2rem;
+          border-radius: 25px;
+          font-weight: 600;
+
+          i {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    .chef-story {
+      padding-left: 2rem;
+
+      @media (max-width: 991px) {
+        padding-left: 0;
+        margin-top: 3rem;
+      }
+
+      .story-header {
+        margin-bottom: 2rem;
+
+        .chef-quote {
+          display: inline-block;
+          width: 60px;
+          height: 60px;
+          background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), transparent 20%));
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 1rem;
+
+          i {
+            font-size: 1.5rem;
+            color: var(--contrast-color);
+          }
+        }
+
+        h2 {
+          font-size: 2.2rem;
+          font-weight: 700;
+          margin-bottom: 0;
+
+          @media (max-width: 768px) {
+            font-size: 1.8rem;
+          }
+        }
+      }
+
+      .lead {
+        font-size: 1.15rem;
+        font-weight: 500;
+        color: var(--heading-color);
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        line-height: 1.8;
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+        margin-bottom: 2rem;
+      }
+
+      .accomplishments {
+        .accomplishment-item {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          padding: 1.2rem;
+          background-color: var(--surface-color);
+          border-radius: 15px;
+          border: 2px solid color-mix(in srgb, var(--accent-color), transparent 85%);
+          transition: all 0.3s;
+
+          &:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+          }
+
+          .icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), transparent 30%));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+
+            i {
+              color: var(--contrast-color);
+              font-size: 1.2rem;
+            }
+          }
+
+          .content {
+            h5 {
+              font-size: 1rem;
+              font-weight: 700;
+              margin-bottom: 0.2rem;
+              color: var(--heading-color);
+            }
+
+            span {
+              font-size: 0.9rem;
+              color: color-mix(in srgb, var(--default-color), transparent 30%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .kitchen-team-section {
+    .section-header {
+      margin-bottom: 3rem;
+
+      h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        position: relative;
+        display: inline-block;
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 60px;
+          height: 3px;
+          background: linear-gradient(to right, var(--accent-color), color-mix(in srgb, var(--accent-color), transparent 50%));
+          border-radius: 2px;
+        }
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: color-mix(in srgb, var(--default-color), transparent 25%);
+        margin-bottom: 0;
+      }
+    }
+
+    .chef-card {
+      background-color: var(--surface-color);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.4s;
+      height: 100%;
+      position: relative;
+
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+
+        .social-overlay {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .chef-image-wrapper img {
+          transform: scale(1.08);
+        }
+      }
+
+      .chef-image-wrapper {
+        position: relative;
+        height: 300px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.5s;
+        }
+
+        .chef-rank {
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          background: rgba(0, 0, 0, 0.8);
+          color: var(--contrast-color);
+          padding: 0.4rem 0.8rem;
+          border-radius: 15px;
+          font-size: 0.8rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+
+        .social-overlay {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s;
+
+          a {
+            width: 40px;
+            height: 40px;
+            background-color: var(--surface-color);
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s;
+
+            &:hover {
+              background-color: var(--accent-color);
+              color: var(--contrast-color);
+              transform: scale(1.1);
+            }
+
+            i {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+
+      .chef-info {
+        padding: 2rem 1.5rem;
+
+        h4 {
+          font-size: 1.3rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+          color: var(--heading-color);
+        }
+
+        .specialty {
+          font-size: 0.95rem;
+          line-height: 1.6;
+          color: color-mix(in srgb, var(--default-color), transparent 25%);
+          margin-bottom: 1.5rem;
+        }
+
+        .chef-stats {
+          display: flex;
+          justify-content: space-between;
+
+          .stat {
+            text-align: center;
+
+            .number {
+              display: block;
+              font-size: 1.5rem;
+              font-weight: 800;
+              color: var(--accent-color);
+              line-height: 1;
+            }
+
+            .label {
+              font-size: 0.8rem;
+              color: color-mix(in srgb, var(--default-color), transparent 40%);
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}

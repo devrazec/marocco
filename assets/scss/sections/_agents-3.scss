@@ -1,0 +1,250 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Agents 3 Section
+--------------------------------------------------------------*/
+.agents-3 {
+  .agent-card {
+    background: var(--surface-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+
+      .contact-overlay {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .agent-image {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+
+  .contact-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: color-mix(in srgb, var(--heading-color), transparent 20%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .contact-buttons {
+    display: flex;
+    gap: 12px;
+
+    .contact-btn {
+      width: 40px;
+      height: 40px;
+      background: var(--accent-color);
+      color: var(--contrast-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      transform: translateY(10px);
+      opacity: 0;
+      animation: slideUpFade 0.3s ease forwards;
+
+      &:hover {
+        background: var(--heading-color);
+        transform: scale(1.1);
+      }
+
+      @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+          animation-delay: #{$i * 0.1}s;
+        }
+      }
+
+      i {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .agent-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--accent-color);
+    color: var(--contrast-color);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    &.verified {
+      background: #28a745;
+    }
+
+    &.new {
+      background: #ff6b35;
+    }
+
+    &.awarded {
+      background: #ffc107;
+      color: var(--heading-color);
+    }
+  }
+
+  .agent-info {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      margin-bottom: 5px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .agent-role {
+      color: var(--accent-color);
+      font-weight: 600;
+      margin-bottom: 12px;
+      display: block;
+      font-size: 14px;
+    }
+
+    .agent-location {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+      font-size: 14px;
+
+      i {
+        margin-right: 6px;
+        color: var(--accent-color);
+      }
+    }
+
+    .agent-bio {
+      font-size: 14px;
+      line-height: 1.6;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      margin-bottom: 20px;
+    }
+
+    .agent-stats {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      padding: 15px 0;
+      border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+      border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+      .stat {
+        text-align: center;
+        flex: 1;
+
+        .number {
+          display: block;
+          font-size: 18px;
+          font-weight: 700;
+          color: var(--accent-color);
+          margin-bottom: 2px;
+        }
+
+        .label {
+          font-size: 12px;
+          color: color-mix(in srgb, var(--default-color), transparent 40%);
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+
+    .btn-primary {
+      background: var(--accent-color);
+      color: var(--contrast-color);
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s ease;
+      margin-top: auto;
+      border: 2px solid var(--accent-color);
+
+      &:hover {
+        background: transparent;
+        color: var(--accent-color);
+      }
+    }
+  }
+
+  @keyframes slideUpFade {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .agent-card {
+      margin-bottom: 30px;
+    }
+
+    .agent-image img {
+      height: 250px;
+    }
+
+    .agent-info {
+      padding: 20px;
+    }
+
+    .agent-stats {
+      gap: 15px;
+
+      .stat .number {
+        font-size: 16px;
+      }
+    }
+
+    .contact-buttons {
+      gap: 8px;
+
+      .contact-btn {
+        width: 35px;
+        height: 35px;
+
+        i {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

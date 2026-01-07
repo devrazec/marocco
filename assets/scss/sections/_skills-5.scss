@@ -1,0 +1,246 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Skills 5 Section
+--------------------------------------------------------------*/
+.skills-5 {
+  .skills-group {
+    background-color: var(--surface-color);
+    padding: 30px;
+    border-radius: 12px;
+    height: 100%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 25px;
+      color: var(--heading-color);
+      position: relative;
+      display: inline-block;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        width: 40px;
+        height: 3px;
+        background: var(--accent-color);
+        border-radius: 2px;
+      }
+    }
+  }
+
+  // Circular Progress Styles
+  .circular-progress {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    text-align: center;
+
+    .outer {
+      width: 160px;
+      height: 160px;
+      padding: 20px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .inner {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .progress-value {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--heading-color);
+    }
+
+    .skill-name {
+      margin-top: 15px;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--heading-color);
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      circle {
+        fill: none;
+        stroke: var(--accent-color);
+        stroke-width: 8px;
+        stroke-dasharray: 440;
+        stroke-dashoffset: 440;
+        transition: stroke-dashoffset 1.5s ease-in-out;
+
+        &[data-value="90"] {
+          stroke-dashoffset: 44; // (440 * (100 - 90)) / 100
+        }
+
+        &[data-value="85"] {
+          stroke-dashoffset: 66; // (440 * (100 - 85)) / 100
+        }
+      }
+    }
+  }
+
+  // Skill Cards
+  .skill-card {
+    background-color: var(--surface-color);
+    border-radius: 10px;
+    padding: 25px 20px;
+    height: 100%;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+
+      .skill-icon {
+        background-color: var(--accent-color);
+
+        i {
+          color: var(--contrast-color);
+        }
+      }
+    }
+
+    .skill-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      transition: all 0.3s;
+
+      i {
+        font-size: 24px;
+        color: var(--accent-color);
+        transition: all 0.3s;
+      }
+    }
+
+    h4 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: var(--heading-color);
+    }
+
+    .skill-level {
+      font-size: 14px;
+      color: var(--accent-color);
+      margin-bottom: 15px;
+    }
+
+    .skill-details {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        font-size: 14px;
+        margin-bottom: 8px;
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+
+        i {
+          color: var(--accent-color);
+          margin-right: 8px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  // Soft Skills Cards
+  .soft-skill-card {
+    background-color: var(--surface-color);
+    border-radius: 10px;
+    padding: 25px;
+    height: 100%;
+    text-align: center;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+
+      .skill-icon {
+        transform: rotateY(180deg);
+      }
+    }
+
+    .skill-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      transition: all 0.6s;
+
+      i {
+        font-size: 28px;
+        color: var(--accent-color);
+      }
+    }
+
+    h4 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: var(--heading-color);
+    }
+
+    p {
+      font-size: 14px;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    .skills-group {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .skill-card {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .circular-progress {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
